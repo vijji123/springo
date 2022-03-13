@@ -1,4 +1,3 @@
-FROM openjdk:8
-EXPOSE 9082
-COPY target/sample-spring.jar sample-spring.jar
-ENTRYPOINT ["java","-jar","/sample-spring.jar"]
+FROM openjdk:8-jdk-alpine
+RUN apk add --no-cache curl tar bash procps
+CMD [""]
